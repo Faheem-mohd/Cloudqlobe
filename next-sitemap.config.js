@@ -2,7 +2,7 @@
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: process.env.SITE_URL || 'https://www.cloudqlobe.com', // Base URL of your site
+    siteUrl: process.env.SITE_URL || 'http://localhost:3000s', // Base URL of your site
     generateRobotsTxt: true, // Generates robots.txt file
     sitemapSize: 7000, // Maximum number of URLs per sitemap file
     exclude: ['/modules/admin/*', '/secret'], // Paths to exclude from sitemap

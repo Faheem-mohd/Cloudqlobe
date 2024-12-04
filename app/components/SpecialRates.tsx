@@ -17,6 +17,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import styles2 from "./RatesNavbar.module.css";
 import Head from "next/head";
+import { Rate } from "./RatesTable";
 
 type RateTableProps = {
   className?: string;
@@ -39,14 +40,18 @@ const RateTable: React.FC<RateTableProps> = ({ className }) => {
   useEffect(() => {
     const fetchRates = async () => {
       try {
-        const response = await fetch("https://cloudqlobe-server.onrender.com/v3/api/rates");
+        const response = await fetch("http://localhost:5000/v3/api/rates");
         if (!response.ok) throw new Error("Failed to fetch rates");
         const data = await response.json();
         setRates(data);
         setFilteredRates(data);
 
-        const uniqueCountries = Array.from(new Set(data.map((rate: Rate) => rate.country)));
+        const uniqueCountries: string[] = Array.from(
+          new Set(data.map((rate: Rate) => rate.country))
+        );
+        
         setCountryOptions(["All", ...uniqueCountries]);
+        
       } catch (err) {
         setError("Error fetching rates.");
       } finally {
@@ -110,7 +115,7 @@ const RateTable: React.FC<RateTableProps> = ({ className }) => {
   const structuredData = generateSchema("ItemList", {
     items: rates.map(rate => ({
       name: rate.qualityDescription,
-      url: `https://www.cloudqlobe.com/pricing`, // Modify to match your routing
+      url: `http://localhost:3000/pricing`, // Modify to match your routing
     })),
   });
 

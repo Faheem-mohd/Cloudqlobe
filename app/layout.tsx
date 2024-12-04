@@ -16,7 +16,7 @@ const SEO = {
   openGraph: {
     type: 'website',
     locale: 'en_IE',
-    url: 'https://www.cloudqlobe.com/',
+    url: 'http://localhost:3000/',
     site_name: 'CloudQlobe',
   },
   // twitter: {

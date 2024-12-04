@@ -110,7 +110,7 @@ const [sortConfig, setSortConfig] = useState<{ key: string; direction: string } 
 const fetchData = async (): Promise<void> => {
   setLoading(true);
   try {
-    const response = await fetch("https://cloudqlobe-server.onrender.com/v3/api/rates");
+    const response = await fetch("http://localhost:5000/v3/api/rates");
     if (!response.ok) throw new Error("Failed to fetch data");
 
     const fetchedData: CountryRate[] = await response.json();

@@ -21,7 +21,7 @@ const CountryRatesTable: React.FC<{ isVisible: boolean }> = ({ isVisible }) => {
   const fetchData = async (): Promise<void> => {
     setLoading(true); // Set loading to true before fetching
     try {
-      const response = await fetch("https://cloudqlobe-server.onrender.com/v3/api/rates");
+      const response = await fetch("http://localhost:5000/v3/api/rates");
       if (!response.ok) {
         throw new Error("Failed to fetch data");
       }

@@ -39,8 +39,8 @@ export default function HomePage() {
     <Head>
     <meta property="og:title" content="Cloudqlobe" />
     <meta property="og:description" content="Cloud Qlobe enables our wholesale VoIP service providers and carriers to operate from anywhere in the world." />
-    <meta property="og:image" content="https://www.cloudqlobe.com/_next/image?url=%2Fimages%2Flogo.png&w=32&q=75" />
-    <meta property="og:url" content="https://www.cloudqlobe.com/" />
+    <meta property="og:image" content="http://localhost:3000/_next/image?url=%2Fimages%2Flogo.png&w=32&q=75" />
+    <meta property="og:url" content="http://localhost:3000/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Cloud Qlobe" />
   </Head>

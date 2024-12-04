@@ -149,7 +149,7 @@ const Header: React.FC = () => {
       <div className="flex items-center space-x-3"  style ={{marginRight:"1em"}}>
         {isLoggedIn ? (
           <>
-            <Link href="https://www.cloudqlobe.com/modules/customer/pages/home">
+            <Link href="http://localhost:3000/modules/customer/pages/home">
               <button className={`${buttonBaseClasses} bg-blue-600 hover:bg-blue-700`}>
                 <LayoutDashboard size={18} />
                 <span>Dashboard</span>
@@ -165,13 +165,13 @@ const Header: React.FC = () => {
           </>
         ) : (
           <>
-            <Link href="https://www.cloudqlobe.com/modules/auth/Base/Signup">
+            <Link href="http://localhost:3000/modules/auth/Base/Signup">
               <button className={`${buttonBaseClasses} bg-green-600 hover:bg-green-700`}>
                 <UserPlus size={18} />
                 <span>SIGN UP</span>
               </button>
             </Link>
-            <Link href="https://www.cloudqlobe.com/modules/auth/Base/login">
+            <Link href="http://localhost:3000/modules/auth/Base/login">
               <button className={`${buttonBaseClasses} bg-orange-400 hover:bg-orange-500`}>
                 <LogIn size={18} />
                 <span>LOGIN</span>
